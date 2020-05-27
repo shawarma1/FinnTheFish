@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Finn the Fish/bubble.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "move"
+length = 1.4
+loop = true
+step = 0.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 304.922, 398.358 ), Vector2( 304.922, 382.773 ), Vector2( 304.922, 406.15 ), Vector2( 304.922, 383.617 ) ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+playback_speed = 0.5
+anims/move = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 304.922, 398.358 )
+scale = Vector2( 0.234629, 0.192717 )
+texture = ExtResource( 1 )
